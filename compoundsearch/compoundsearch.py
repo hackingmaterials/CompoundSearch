@@ -7,9 +7,22 @@ __author__ = 'Anubhav Jain <ajain@lbl.gov>'
 
 target_formula = "InCl"
 module_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-lit_file = os.path.join(module_dir, "compositions.txt")
+lit_file = os.path.join(module_dir, "compounds_list", "thermoelectrics.txt")
+
 
 def get_group_formula(composition):
+    """
+    Returns the formula string, but with elements replaced by their group num
+    in the Periodic Table.
+
+    e.g., Y2SiO5 becomes (3)2-(14)1-(16)5
+
+    Args:
+        composition: (Composition)
+
+    Returns: (str)
+
+    """
     new_comp_dict = defaultdict(float)
 
     for e in composition.elements:
@@ -27,7 +40,19 @@ def get_group_formula(composition):
 
     return form[0:-1]
 
+
 def get_fuzzy_formula(composition):
+    """
+    Returns the formula string, but with elements anonymized by atom type
+
+    e.g., Y2SiO5 becomes Tm1Y3
+
+    Args:
+        composition: (Composition)
+
+    Returns: (str)
+
+    """
     x = defaultdict(float)
 
     for e in composition.elements:
@@ -57,6 +82,19 @@ def get_fuzzy_formula(composition):
     return my_form
 
 def get_fuzzy_formula_strict(composition):
+    """
+    Returns the formula string, but with elements anonymized by atom type using
+    a greater number of anonymizations than the normal fuzzy_formula method.
+
+    e.g., Y2SiO5 becomes Tm2X1Y5
+
+    Args:
+        composition: (Composition)
+
+    Returns: (str)
+
+    """
+
     x = defaultdict(float)
 
     for e in composition.elements:
