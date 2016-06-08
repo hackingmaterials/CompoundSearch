@@ -187,8 +187,11 @@ class CompoundSearch:
                     ref3 = line[3:]
                 elif line.startswith("##"):
                     ref2 = line[2:]
+                    ref3 = ""
                 elif line.startswith("#"):
                     ref1 = line[1:]
+                    ref2 = ""
+                    ref3 = ""
                 elif line:
                     c = Composition(line)
                     self.line_data[line_no] = \
