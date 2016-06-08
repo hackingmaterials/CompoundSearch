@@ -173,33 +173,33 @@ class CompoundSearch:
     # TODO: be able to search more than one lit file
     def __init__(self, lit_file=DEFAULT_LIT_FILE):
 
-        self.line_data = {}  #  (line no.) -> {"formula_pretty", "ref1", "ref2", "ref3"}
+        self.line_data = {}  #  (line no.) -> {"formula_pretty", "tag1", "tag2", "tag3"}
 
         if not os.path.exists(lit_file):
             raise ValueError("Cannot find lit file: {}".format(lit_file))
 
         with open(lit_file) as f:
             line_no = 1
-            ref1 = ""  # most recent level-1 tag
-            ref2 = ""  # most recent level-2 tag
-            ref3 = ""  # most recent level-3 tag
+            tag1 = ""  # most recent level-1 tag
+            tag2 = ""  # most recent level-2 tag
+            tag3 = ""  # most recent level-3 tag
 
             for line in f:
                 line = line.strip()
                 if line.startswith("###"):
-                    ref3 = line[3:]
+                    tag3 = line[3:]
                 elif line.startswith("##"):
-                    ref2 = line[2:]
-                    ref3 = ""
+                    tag2 = line[2:]
+                    tag3 = ""
                 elif line.startswith("#"):
-                    ref1 = line[1:]
-                    ref2 = ""
-                    ref3 = ""
+                    tag1 = line[1:]
+                    tag2 = ""
+                    tag3 = ""
                 elif line:
                     c = Composition(line)
                     self.line_data[line_no] = \
                         {"formula_pretty": c.get_reduced_formula_and_factor()[0],
-                         "ref1": ref1, "ref2": ref2, "ref3": ref3}
+                         "tag1": tag1, "tag2": tag2, "tag3": tag3}
                 line_no += 1
 
     def search(self, target_formula):
@@ -213,7 +213,7 @@ class CompoundSearch:
 
         # TODO: make this a Pandas dataframe so that you can sort however you want
         # print header
-        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("formula_pretty", "score", "matches", "line_no", "ref1", "ref2", "ref3"))
+        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("formula_pretty", "score", "matches", "line_no", "tag1", "tag2", "tag3"))
 
         for line_no in self.line_data:
             ld = self.line_data[line_no]
@@ -221,7 +221,7 @@ class CompoundSearch:
             if td["score"] > 0:
                 print "{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
                     ld["formula_pretty"], td["score"], td["matches"], line_no,
-                    ld["ref1"], ld["ref2"], ld["ref3"])
+                    ld["tag1"], ld["tag2"], ld["tag3"])
 
 if __name__ == "__main__":
     cs = CompoundSearch()

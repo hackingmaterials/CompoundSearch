@@ -12,7 +12,7 @@ Note that if you run "compoundsearch.py", the main method at the end will essent
 
 which will return something like this (first couple of output lines):
 ```
-formula_pretty	score	matches	line_no	ref1	ref2	ref3
+formula_pretty	score	matches	line_no	tag1	tag2	tag3
 FeCuO2	15	['anonymized formula']	5	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p2	
 BiSb	15	['fuzzy formula']	22	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p7	
 AgSbTe2	15	['anonymized formula']	40	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p9	
