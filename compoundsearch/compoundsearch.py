@@ -5,9 +5,10 @@ from pymatgen import Composition
 
 __author__ = 'Anubhav Jain <ajain@lbl.gov>'
 
-target_formula = "InCl"
 module_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)))
-lit_file = os.path.join(module_dir, "compounds_list", "thermoelectrics.txt")
+DEFAULT_LIT_FILE = os.path.join(module_dir, "compounds_list", "thermoelectrics.txt")
+
+# TODO: make a proper command line interface
 
 
 def get_group_formula(composition):
@@ -80,6 +81,7 @@ def get_fuzzy_formula(composition):
             my_form += "{}{}".format(label, amt)
 
     return my_form
+
 
 def get_fuzzy_formula_strict(composition):
     """
@@ -164,38 +166,55 @@ def match_compositions(formula1, formula2):
 
     return score, matches
 
+
+class CompoundSearch:
+    # TODO: be able to search more than one lit file
+    def __init__(self, lit_file=DEFAULT_LIT_FILE):
+
+        self.line_data = {}  #  (line no.) -> {"formula_pretty", "ref1", "ref2", "ref3"}
+
+        with open(lit_file) as f:
+            line_no = 1
+            ref1 = ""  # most recent level-1 tag
+            ref2 = ""  # most recent level-2 tag
+            ref3 = ""  # most recent level-3 tag
+
+            for line in f:
+                line = line.strip()
+                if line.startswith("###"):
+                    ref3 = line[3:]
+                elif line.startswith("##"):
+                    ref2 = line[2:]
+                elif line.startswith("#"):
+                    ref1 = line[1:]
+                elif line:
+                    c = Composition(line)
+                    self.line_data[line_no] = \
+                        {"formula_pretty": c.get_reduced_formula_and_factor()[0],
+                         "ref1": ref1, "ref2": ref2, "ref3": ref3}
+                line_no += 1
+
+    def search(self, target_formula):
+        target_data = {}
+        # add "score" and "matches" keys to target_data
+        for line_no in self.line_data:
+            score, matches = match_compositions(self.line_data[line_no]["formula_pretty"], target_formula)
+            target_data[line_no] = {}
+            target_data[line_no]["score"] = score
+            target_data[line_no]["matches"] = matches
+
+        # TODO: make this a Pandas dataframe so that you can sort however you want
+        # print header
+        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("score", "formula_pretty", "ref1", "ref2", "ref3", "line_no", "matches"))
+
+        for line_no in self.line_data:
+            ld = self.line_data[line_no]
+            td = target_data[line_no]
+            if td["score"] > 0:
+                print "{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
+                    td["score"], ld["formula_pretty"], ld["ref1"], ld["ref2"],
+                    ld["ref3"], line_no, td["matches"])
+
 if __name__ == "__main__":
-    # Initialize data
-    with open(lit_file) as f:
-        line_no = 1
-        ref3 = ""
-        ref2 = ""
-        ref1 = ""
-        line_data = {}
-
-        for line in f:
-            line = line.strip()
-            if line.startswith("###"):
-                ref3 = line[3:]
-            elif line.startswith("##"):
-                ref2 = line[2:]
-            elif line.startswith("#"):
-                ref1 = line[1:]
-            elif line:
-                c = Composition(line)
-                line_data[line_no] = {"formula_pretty": c.get_reduced_formula_and_factor()[0],
-                                      "ref1": ref1, "ref2": ref2, "ref3": ref3}
-            line_no += 1
-
-    # find matches
-    for line_no in line_data:
-        score, matches = match_compositions(line_data[line_no]["formula_pretty"], target_formula)
-        line_data[line_no]["score"] = score
-        line_data[line_no]["matches"] = matches
-
-    print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("score", "formula_pretty", "ref1", "ref2", "ref3", "line_no", "matches"))
-
-    for line_no in line_data:
-        x = line_data[line_no]
-        if x["score"] > 0:
-            print "{}\t{}\t{}\t{}\t{}\t{}\t{}".format(x["score"], x["formula_pretty"], x["ref1"], x["ref2"], x["ref3"], line_no, x["matches"])
+    cs = CompoundSearch()
+    cs.search("InCl")
