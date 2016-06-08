@@ -175,6 +175,9 @@ class CompoundSearch:
 
         self.line_data = {}  #  (line no.) -> {"formula_pretty", "ref1", "ref2", "ref3"}
 
+        if not os.path.exists(lit_file):
+            raise ValueError("Cannot find lit file: {}".format(lit_file))
+
         with open(lit_file) as f:
             line_no = 1
             ref1 = ""  # most recent level-1 tag
