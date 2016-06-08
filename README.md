@@ -6,10 +6,25 @@ To use this code, run the following as an example:
 
 ```python
 cs = CompoundSearch()
-cs.search("InCl")
+cs.search("Pb2TeSe")
+```
+Note that if you run "compoundsearch.py", the main method at the end will essentially do this.
+
+which will return something like this (first couple of output lines):
+```
+formula_pretty	score	matches	line_no	ref1	ref2	ref3
+FeCuO2	15	['anonymized formula']	5	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p2	
+BiSb	15	['fuzzy formula']	22	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p7	
+AgSbTe2	15	['anonymized formula']	40	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p9	
+GaAgTe2	15	['anonymized formula']	41	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p9	
+GaCuTe2	15	['anonymized formula']	42	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p9	
+AgSbTe2	15	['anonymized formula']	47	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p10	
+GeTe	30	['group formula']	48	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p10	
+SnTe	45	['group formula', 'fuzzy formula']	51	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p10	
+TePb	45	['group formula', 'fuzzy formula']	52	 Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).	p10	
 ```
 
-Note that if you run "compoundsearch.py", the main method at the end will essentially do this.
+The highest score of these is for ``SnTe`` and ``TePb`` since they have a score of 45 (maximum amongst the rows listed). The ``GeTe`` is close in terms of a match to the target.
 
 This code uses the default thermoelectrics library file found in *compounds_list/thermoelectrics.txt*. This library file contains some known thermoelectrics compositions; the code is searching to see which of the known compositions best matches the query "InCl". There are no exact matches but a few formulas that have at least passing similarity in some sense.
 
