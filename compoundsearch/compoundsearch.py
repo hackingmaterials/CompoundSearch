@@ -225,4 +225,4 @@ class CompoundSearch:
 
 if __name__ == "__main__":
     cs = CompoundSearch()
-    cs.search("InCl")
+    cs.search("Pb2SeTe")
