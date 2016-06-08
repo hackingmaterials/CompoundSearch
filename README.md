@@ -9,6 +9,8 @@ cs = CompoundSearch()
 cs.search("InCl")
 ```
 
+Note that if you run "compoundsearch.py", the main method at the end will essentially do this.
+
 This code uses the default thermoelectrics library file found in *compounds_list/thermoelectrics.txt*. This library file contains some known thermoelectrics compositions; the code is searching to see which of the known compositions best matches the query "InCl". There are no exact matches but a few formulas that have at least passing similarity in some sense.
 
 You can modify or create a new library file as desired. The library file format is simple. Each line contains a formula that is searched. If there is a line that begins with "#", "##", or "###", the line used to tag the entries below with a 1st level, 2nd-level, or 3rd-level tag (respectively). The tags will be reported along with the compound match and can be used to help track down where you found the compound. For example, you can use the 1st level tag to give a paper reference, a 2nd level tag to give the page number, and a 3rd level tag for a note. This is the convention used in the default library file.
