@@ -213,15 +213,15 @@ class CompoundSearch:
 
         # TODO: make this a Pandas dataframe so that you can sort however you want
         # print header
-        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("score", "formula_pretty", "ref1", "ref2", "ref3", "line_no", "matches"))
+        print("{}\t{}\t{}\t{}\t{}\t{}\t{}".format("formula_pretty", "score", "matches", "line_no", "ref1", "ref2", "ref3"))
 
         for line_no in self.line_data:
             ld = self.line_data[line_no]
             td = target_data[line_no]
             if td["score"] > 0:
                 print "{}\t{}\t{}\t{}\t{}\t{}\t{}".format(
-                    td["score"], ld["formula_pretty"], ld["ref1"], ld["ref2"],
-                    ld["ref3"], line_no, td["matches"])
+                    ld["formula_pretty"], td["score"], td["matches"], line_no,
+                    ld["ref1"], ld["ref2"], ld["ref3"])
 
 if __name__ == "__main__":
     cs = CompoundSearch()

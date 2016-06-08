@@ -1,4 +1,4 @@
-# New promising bulk thermoelectrics: intermetallics, pnictides, and chalcogenides
+# Gonçalves, A. P. & Godart, C. New promising bulk thermoelectrics: Intermetallics, pnictides and chalcogenides. Eur. Phys. J. B 87, 42 (2014).
 
 ##p2
 YBa2Cu3O6
@@ -184,7 +184,7 @@ LaFeAsO
 ##p18
 SrTiO3
 
-# Accelerated discovery of thermoelectric materials: combinatorial facility and high-throughput measurement of thermoelectric power factor
+# García-Cañadas, J., Adkins, N. J. E., McCain, S., Hauptstein, B., Brew, A., Jarvis, D. J. & Min, G. Accelerated discovery of thermoelectric materials: combinatorial facility and high-throughput measurement of thermoelectric power factor. ACS Comb. Sci. acscombsci.5b00178 (2016).
 
 AlFe3Ti4
 Al30Fe55Ti15
