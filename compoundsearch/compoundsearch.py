@@ -134,6 +134,8 @@ def get_fuzzy_formula_strict(composition):
     return my_form
 
 
+# TODO: be able to customize the scoring system
+# TODO: tune the scoring system a bit better
 def match_compositions(formula1, formula2):
     c1 = Composition(formula1).get_reduced_composition_and_factor()[0]
     c2 = Composition(formula2).get_reduced_composition_and_factor()[0]
