@@ -13,9 +13,9 @@ This code uses the default thermoelectrics library file found in *compounds_list
 
 You can modify or create a new library file as desired. The library file format is simple. Each line contains a formula that is searched. If there is a line that begins with "#", "##", or "###", the line used to tag the entries below with a 1st level, 2nd-level, or 3rd-level tag (respectively). The tags will be reported along with the compound match and can be used to help track down where you found the compound. For example, you can use the 1st level tag to give a paper reference, a 2nd level tag to give the page number, and a 3rd level tag for a note. This is the convention used in the default library file.
 
-# FAQS
+## FAQS
 
-## What algorithm(s) are being used to judge formula similarity?
+### What algorithm(s) are being used to judge formula similarity?
 
 There are a few different types of matches we are looking for:
 * exact formula matches
@@ -26,10 +26,10 @@ There are a few different types of matches we are looking for:
 
 Each type of match has a different score that is added if the match is confirmed. Suggestions for algorithm improvements are welcome.
 
-## I am getting a lot of results reported back that don't look very similar.
+### I am getting a lot of results reported back that don't look very similar.
 This is common - you basically need to decide for yourself which formulas are truly similar and which ones are not from the list provided. The code is only there to feed you ideas for what known compounds might be similar to your composition. It is not a complete solution by any means.
 
-## Can you improve the interface? e.g., allow me to sort the results by score? Or give me a command line interface?
+### Can you improve the interface? e.g., allow me to sort the results by score? Or give me a command line interface?
 
 If there is enough interest in this code, these things are possible.
 
