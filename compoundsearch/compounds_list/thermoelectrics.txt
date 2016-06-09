@@ -188,3 +188,20 @@ SrTiO3
 
 AlFe3Ti4
 Al30Fe55Ti15
+
+# Lu...Reaney(2016): 10.1021/acs.chemmater.5b04616
+
+## La-doped
+### Some sintering/ZT data for Dy, Nb, Ta, Nd, Pr, W-doped SrTiO3
+SrTiO3
+
+# Zevalkink...Snyder(2010): 10.1039/c0ee00517g
+## Na-doped 0-15%
+
+Ca3AlSb3
+
+# Liu...Zhu(2015): 10.1039/c5ta04418a
+## half-Heusler
+### Available: m*, mu, sigma, S, n, k, ZT, phonon tau, XRD
+ZrNiSn
+HfNiSn
