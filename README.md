@@ -4,7 +4,7 @@ This repo is meant to help you figure whether a compound of interest is similar 
 
 For complete beginners, the easiest way to run this code is:
 
-1. Download the repo (there is a link provided by Github to Clone/Download the repo.
+1. Download the repo (there is a link provided by Github to Clone/Download the repo).
 2. (Optional) Edit the file ``compoundsearch.py`` by changing the target composition near the *bottom* of the file.
 3. Run the file by typing ``python compoundsearch.py`` into your shell.
 
