@@ -2,7 +2,13 @@
 
 This repo is meant to help you figure whether a compound of interest is similar to a compound that is already known. Given a target composition, this code will look through a library of compounds (that you define) and see whether the target is *similar* to any in that library. The similarity is judged by fuzzy matching techniques, which is the (intended) specialty of this code - although keep in mind that these are just estimates. The exact formula does *not* need to match - we are looking for *similar* formulas. The greater the similarity, the higher **score** of the match. The convention is that an exact match to the formula has a **score** of 100.
 
-To use this code, run the following as an example:
+For complete beginners, the easiest way to run this code is:
+
+1. Download the repo (there is a link provided by Github to Clone/Download the repo.
+2. (Optional) Edit the file ``compoundsearch.py`` by changing the target composition near the *bottom* of the file.
+3. Run the file by typing ``python compoundsearch.py`` into your shell.
+
+If you know how to use Python, you can do something like this:
 
 ```python
 cs = CompoundSearch()
