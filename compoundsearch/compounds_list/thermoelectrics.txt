@@ -197,11 +197,22 @@ SrTiO3
 
 # Zevalkink...Snyder(2010): 10.1039/c0ee00517g
 ## Na-doped 0-15%
-
 Ca3AlSb3
 
 # Liu...Zhu(2015): 10.1039/c5ta04418a
 ## half-Heusler
-### Available: m*, mu, sigma, S, n, k, ZT, phonon tau, XRD
+### exp: m*, mu, sigma, S, n, k, ZT, phonon tau, XRD
 ZrNiSn
 HfNiSn
+
+# Akasaka...Takanashi(2007): 10.1016/j.jcrysgro.2006.10.270
+## undoped and boron nitride(BN) doped
+### exp: XRD, imps(ppm), S, PF, k, k_ph, ZT
+Mg2Si
+
+# Wang...Snyder(2013): 10.1002/aenm.201200683 
+## Cl-doped PbS
+### exp: XRD, mu, sigma, tau_el, S, n, k, k_L, ZT + props of Pb(Te,Se,S) 
+PbS
+PbTe
+PbSe
