@@ -2,6 +2,7 @@ import os
 from collections import defaultdict
 
 from pymatgen import Composition
+import argparse
 
 __author__ = 'Anubhav Jain <ajain@lbl.gov>'
 
@@ -224,5 +225,10 @@ class CompoundSearch:
                     ld["tag1"], ld["tag2"], ld["tag3"])
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-c", "--compound",
+                        help="Formula of the compound for which you want to search",
+                        required=False, default = "Pb2SeTe")
+    args = parser.parse_args()
     cs = CompoundSearch()
-    cs.search("Pb2SeTe")
+    cs.search(args.compound)
