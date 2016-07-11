@@ -216,3 +216,15 @@ Mg2Si
 PbS
 PbTe
 PbSe
+
+# Reynolds, T., Bales, J., Kelley, R. & DiSalvo, F. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 19–34 (2003).
+
+Pb2SiS4
+Cu2PbSiS4
+Cu6Pb(SiS4)2
+CrPS4
+PrPbPS5
+K3BiTe3
+K2HgBi2Te5
+Ni11Sb2Te4
+Ni2SbTe2
