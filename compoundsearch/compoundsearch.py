@@ -226,9 +226,7 @@ class CompoundSearch:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("-c", "--compound",
-                        help="Formula of the compound for which you want to search",
-                        required=False, default = "Pb2SeTe")
+    parser.add_argument('compound', help="Formula of the compound for which you want to search")
     args = parser.parse_args()
     cs = CompoundSearch()
     cs.search(args.compound)
