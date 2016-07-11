@@ -5,16 +5,15 @@ This repo is meant to help you figure whether a compound of interest is similar 
 For complete beginners, the easiest way to run this code is:
 
 1. Download the repo (there is a link provided by Github to Clone/Download the repo).
-2. (Optional) Edit the file ``compoundsearch.py`` by changing the target composition near the *bottom* of the file.
-3. Run the file by typing ``python compoundsearch.py`` into your shell.
+2. cd to the directory containing ``compoundsearch.py``.
+3. Run the file by typing ``python compoundsearch.py Pb2TeSe`` into your shell, where ``Pb2TeSe`` is an example of the formula you want to look up.
 
-If you know how to use Python, you can do something like this:
+If you know how to use Python, you can do something like this instead:
 
 ```python
 cs = CompoundSearch()
 cs.search("Pb2TeSe")
 ```
-Note that if you run "compoundsearch.py", the main method at the end will essentially do this.
 
 which will return something like this (first couple of output lines):
 ```
