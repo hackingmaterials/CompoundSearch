@@ -228,3 +228,11 @@ K3BiTe3
 K2HgBi2Te5
 Ni11Sb2Te4
 Ni2SbTe2
+
+# Stern, R., Dongre, B. & Madsen, G. K. H. Extrinsic doping of the half-Heusler compounds. Nanotechnology 27, 1–6
+TiNiSn
+ZrNiSn
+HfNiSn
+TiCoSb
+ZrCoSb
+HfCoSb
