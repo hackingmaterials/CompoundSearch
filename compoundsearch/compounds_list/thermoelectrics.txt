@@ -236,3 +236,19 @@ HfNiSn
 TiCoSb
 ZrCoSb
 HfCoSb
+
+# 1. Fan, X., Case, E. D., Lu, X. & Morelli, D. T. Room temperature mechanical properties of natural-mineral-based thermoelectrics. J. Mater. Sci. 48, 7540–7550 (2013).
+
+SrTe
+Cu12Sb4S13
+Cu10Zn2As4S13
+YbAl3
+Ba8Al16Si30
+Si80Ge20
+AgSbTe20
+AgPb9Sn9Sb0.6Te20
+Mg2Si
+CoSb3
+CeSb12
+PbTe
+PbS
