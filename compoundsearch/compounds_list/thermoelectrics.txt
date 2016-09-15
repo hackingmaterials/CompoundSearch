@@ -237,7 +237,7 @@ TiCoSb
 ZrCoSb
 HfCoSb
 
-# 1. Fan, X., Case, E. D., Lu, X. & Morelli, D. T. Room temperature mechanical properties of natural-mineral-based thermoelectrics. J. Mater. Sci. 48, 7540–7550 (2013).
+# Fan, X., Case, E. D., Lu, X. & Morelli, D. T. Room temperature mechanical properties of natural-mineral-based thermoelectrics. J. Mater. Sci. 48, 7540–7550 (2013).
 
 SrTe
 Cu12Sb4S13
@@ -252,3 +252,33 @@ CoSb3
 CeSb12
 PbTe
 PbS
+
+# Dong, Y., Khabibullin, A. R., Wei, K., Salvador, J. R., Nolas, G. S. & Woods, L. M. Bournonite PbCuSbS3: Stereochemically Active Lone-Pair Electrons that Induce Low Thermal Conductivity. ChemPhysChem 16, 3264–3270 (2015).
+
+PbCuSbS3
+Sb2S3
+
+# Aselage, T. L. & Emin, D. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 55–70 (2003).
+B4C
+C13C2
+B9C
+
+# Dashjav, E., Zhu, Y. & Kleinke, H. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 89–106 (Springer, 2003).
+
+LaFe3CoSb12
+Zr2V6Sb9
+NbS2
+HfMoS4
+Mo3Sb5Te2
+Ti5Sb8
+Mn4Si7
+Mn27Si47
+Mn15Si26
+Mn11Si19
+Zr11Sb18
+
+# 1. Blake, N. P. & Metiu, H. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 259–302 (Springer, 2003).
+
+CsBi4Te6
+Ba8Ga16Ge30
+Sr8Ga16Ge30
