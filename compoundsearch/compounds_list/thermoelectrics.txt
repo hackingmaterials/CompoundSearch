@@ -277,8 +277,24 @@ Mn15Si26
 Mn11Si19
 Zr11Sb18
 
-# 1. Blake, N. P. & Metiu, H. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 259–302 (Springer, 2003).
+# Blake, N. P. & Metiu, H. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 259–302 (Springer, 2003).
 
 CsBi4Te6
 Ba8Ga16Ge30
 Sr8Ga16Ge30
+
+# Hamid Elsheikh, M., Shnawah, D. A., Sabri, M. F. M., Said, S. B. M., Haji Hassan, M., Ali Bashir, M. B. & Mohamad, M. A review on thermoelectric renewable energy: Principle parameters that affect their performance. Renew. Sustain. Energy Rev. 30, 337–355 (2014).
+
+NaCo2O4
+LaCoO3
+In2O3
+BaSnO3
+BaPbO3
+Ca3Co4O9
+SrTiO3
+Bi2Ca2Co2
+GaGeTe
+Mg2Si
+Mg2Ge
+Mg2Sn
+Mg2Pb
