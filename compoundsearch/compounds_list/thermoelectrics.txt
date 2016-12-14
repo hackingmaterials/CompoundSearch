@@ -298,3 +298,22 @@ Mg2Si
 Mg2Ge
 Mg2Sn
 Mg2Pb
+
+# Tamaki, H., Sato, H. K. & Kanno, T. Isotropic Conduction Network and Defect Chemistry in Mg 3 + δ Sb 2 -Based Layered Zintl Compounds with High Thermoelectric Performance. 1, 1–6 (2016).
+
+Mg3Sb2
+Mg3.2Sb1.5Bi0.5
+Mg3.2Sb1.5Bi0.49Te0.01
+
+# Tamaki, H., Kanno, T., Sakai, A., Takahashi, K., Kusada, H. & Yamada, Y. High thermoelectric performance in the multi-valley electronic system Zr3Ni3-xCoxSb4 and the high-mobility Zr3Ni3-xCuxSb 4. Appl. Phys. Lett. 104, 2012–2016 (2014).
+
+Zr3Ni3Sb4
+
+# Blake, N. P. & Metiu, H. in Chemistry, Physics, and Materials Science of Thermoelectric Materials 259–302 (Springer, 2003).
+
+Sr8Ga16Ge30
+CsBi4Te6
+Ba2Ga4Ge8
+BaSn3
+NaSn5
+Na2Ba3Sb4
